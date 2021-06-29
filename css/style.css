@@ -1,0 +1,241 @@
+body{
+	perspective:150;
+	/* -webkit-perspective:150; */
+	 /* font-variant-east-asian: traditional; */
+	 color: #021127;
+	 overflow: hidden;
+	 
+}
+.content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	/* transform: rotateX(20deg);
+	-webkit-transform: rotateX(20deg); */
+}
+.tai_chi_box {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.tai_chi_box > div {
+	width: 50%;
+	height: 100%;
+}
+.boxleft {
+	background: #fff;
+}
+.boxright {
+	background: #043240;;
+}
+.boxtop {
+	width: 100%;
+	height: 50%;
+	background: #043240;;
+	border-radius: 50%;
+	display: flex;
+	margin-left: 50%;
+}
+.boxtop > div {
+	width: 20%;
+	height: 20%;
+	border-radius: 50%;
+	background: #fff;
+	margin: auto;
+	position: relative;
+	z-index: 99;
+}
+.boxbouttom {
+	width: 100%;
+	height: 50%;
+	background: #fff;
+	border-radius: 50%;
+	display: flex;
+	margin-left: -50%;
+	margin-top: 100%;
+}
+.boxbouttom > div {
+	width: 20%;
+	height: 20%;
+	border-radius: 50%;
+	background: #021127;
+	margin: auto;
+	position: relative;
+	z-index: 99;
+}
+#eightGua {
+	width: 140px;
+	height: 140px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(30deg);
+	border-radius: 50%;
+	border: 3px solid #0ff;
+	padding: 16px;
+	box-sizing: content-box;
+	transition: all 1s linear;
+	background: #043240;
+}
+#eightGua p{
+	border-right: 2px solid #0ff; 
+}
+.ceshi {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+	/* border: 2px solid; */
+	color: aqua;
+}
+#eightGua > div > span {
+	display: block;
+	font-size: 1.4rem;
+}
+.tai_chi_border {
+	border: 3px solid #021127;
+	width: 85px;
+	height: 85px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	overflow: hidden;
+	z-index: 999;
+	transition: all 1s linear;
+}
+.eightGua_border {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.eightGua_border > p {
+	width: 50%;
+	height: 50%;
+	border-right: 2px solid;
+	transform-origin: 100% 100%;
+	position: absolute;
+	/* transition: all 1s; */
+}
+.ring {
+	/* overflow: hidden; */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+	border-radius: 50%;
+	border: 3px solid;
+	padding: 16px;
+	box-sizing: content-box;
+}
+.ceshi>span{
+	display: inline-block;
+	transform: rotate(-45deg)
+}
+.adjustment{
+	transform:translate(-50%, -50%) rotate(22.5deg);
+}
+.style_add_bagua{
+	background: #999;
+  z-index: 998;
+}
+.style_add_tiangan{
+	background: #075971;
+  	z-index: 997;
+}
+.style_add_dizhi{
+	background: #043240;
+	padding: 34px;
+  	z-index: 996;
+	border: 3px solid #085c75;
+	transition: all 1s cubic-bezier(0.21, 0.76, 1, 1);
+}
+.style_add_dizhi span{
+	font-size: 22px;
+}
+.adjustment_tiangan{
+	transform:translate(-50%, -50%) rotate(45deg);
+}
+.style_add_xingxiu{
+	padding: 42px;
+	background: #021127;
+	color: #085c75;
+	z-index: 995;
+}
+.style_add_xingxiu span{
+	font-size: 20px;
+	font-family: "STLiti";
+	position: relative;
+	top: 3px;
+	left: 3px;
+}
+.style_add_liusigua{
+	padding: 30px;
+	border: 2px dotted aqua;
+	text-shadow: 0px 0px 6px rgb(3 255 255);
+	animation:liusigua 60s linear infinite alternate;
+	animation-timing-function:cubic-bezier(0.21, 0.65, 1, 1);
+}
+@keyframes liusigua{
+	0%{
+		transform: translate(-50%, -50%) rotate(0deg) scale(0.8);
+	}
+	3%{
+		transform: translate(-50%, -50%) rotate(0deg) scale(1);
+	}
+	100%{
+		transform: translate(-50%, -50%) rotate(360deg) scale(1);
+	}
+}
+.wreath{
+	overflow: hidden;
+	background: aqua;
+	animation:wreath 60s linear infinite alternate;
+	animation-direction:Chrome;
+	-webkit-animation-direction:Chrome; /* Safari 和 Chrome */
+}
+@keyframes wreath{
+	0%{
+		transform: translate(-50%, -50%) rotate(360deg) scale(1.1);
+	}
+	3%{
+		transform: translate(-50%, -50%) rotate(350deg) scale(1);
+	}
+	10%{
+		transform: translate(-50%, -50%) rotate(340deg) scale(1);
+	}
+	100%{
+		transform: translate(-50%, -50%) rotate(0) scale(1);
+	}
+}
+
+.wreath span{
+/* border: 1px solid; */
+display: block;
+width: 8px;
+height: 8px;
+margin: 0 auto;
+}
+.echarts_box{
+	overflow: hidden;
+}
+#myCanvas{
+  position: absolute;
+}
+.eightGua_border_wreath p {
+	box-shadow: -18px -13px 0px -15px rgba(0,0,0,0.75);
+	-webkit-box-shadow: -18px -13px 0px -15px rgba(0,0,0,0.75);
+	-moz-box-shadow: -18px -13px 0px -15px rgba(0,0,0,0.75);
+}

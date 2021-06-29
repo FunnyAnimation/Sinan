@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/initialize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./font/demo.css">
+    <link rel="stylesheet" href="./font/iconfont.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+</head>
+
+<body style="background-color: rgb(104, 104, 104);">
+    <canvas id="myCanvas" width="" height=""></canvas>
+    <div id="timeDiv"></div>
+    <div class="content">
+        <div class="tai_chi_border" id="bagua">
+            <div class="tai_chi_box">
+                <div class="boxleft white">
+                    <div class="boxtop">
+                        <div></div>
+                    </div>
+                </div>
+                <div class="boxright">
+                    <div class="boxbouttom">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="eightGua" class="ring style_add_bagua" style="width: 140px;height: 140px;">
+            <div class="ceshi"><span class="iconfont icon-dui"></span></div>
+            <div class="ceshi"><span class="iconfont icon-gen"></span></div>
+            <div class="ceshi"><span class="iconfont icon-kan"></span></div>
+            <div class="ceshi"><span class="iconfont icon-kun"></span></div>
+            <div class="ceshi"><span class="iconfont icon-li"></span></div>
+            <div class="ceshi"><span class="iconfont icon-gan"></span></div>
+            <div class="ceshi"><span class="iconfont icon-xun"></span></div>
+            <div class="ceshi"><span class="iconfont icon-zhen"></span></div>
+            <div class="eightGua_border adjustment"></div>
+        </div>
+        <div class="ring style_add_tiangan" style="width: 190px;height: 190px;">
+            <!-- 甲、乙、丙、丁、戊、己、庚、辛、壬、癸 -->
+            <div class="ceshi"><span>甲</span></div>
+            <div class="ceshi"><span>乙</span></div>
+            <div class="ceshi"><span>丙</span></div>
+            <div class="ceshi"><span>丁</span></div>
+            <div class="ceshi"><span>戊</span></div>
+            <div class="ceshi"><span>己</span></div>
+            <div class="ceshi"><span>庚</span></div>
+            <div class="ceshi"><span>辛</span></div>
+            <div class="ceshi"><span>壬</span></div>
+            <div class="ceshi"><span>癸</span></div>
+            <div class="eightGua_border adjustment_tiangan"></div>
+        </div>
+        <div class="ring style_add_dizhi" style="width: 240px;height: 240px;">
+            <!-- 子、丑、寅、卯、辰、巳、午、未、申、酉、戌、亥 -->
+            <div class="ceshi iconfont"><span>&#xe68a;</span></div>
+            <div class="ceshi iconfont"><span>&#xe602;</span></div>
+            <div class="ceshi iconfont"><span>&#xe793;</span></div>
+            <div class="ceshi iconfont"><span>&#xe83b;</span></div>
+            <div class="ceshi iconfont"><span>&#xe7df;</span></div>
+            <div class="ceshi iconfont"><span>&#xe83a;</span></div>
+            <div class="ceshi iconfont"><span>&#xe600;</span></div>
+            <div class="ceshi iconfont"><span>&#xe606;</span></div>
+            <div class="ceshi iconfont"><span>&#xe604; </span></div>
+            <div class="ceshi iconfont"><span>&#xe609;</span></div>
+            <div class="ceshi iconfont"><span>&#xe603;</span></div>
+            <div class="ceshi iconfont"><span>&#xe601;</span></div>
+            <div class="eightGua_border"></div>
+        </div>
+        <!-- style_add_dizhi -->
+        <div class="ring style_add_xingxiu" style="width: 300px;height: 300px;">
+            <!--斗、牛、女、虚、危、室、壁,奎、娄、胃、昴、毕、觜、参,井、鬼、柳、星、张、翼、轸, 角、亢、氐、房、心、尾、箕 -->
+            <div class="ceshi"><span>斗</span></div>
+            <div class="ceshi"><span>牛</span></div>
+            <div class="ceshi"><span>女</span></div>
+            <div class="ceshi"><span>虚</span></div>
+            <div class="ceshi"><span>危</span></div>
+            <div class="ceshi"><span>室</span></div>
+            <div class="ceshi"><span>壁</span></div>
+            <div class="ceshi"><span>奎</span></div>
+            <div class="ceshi"><span>娄</span></div>
+            <div class="ceshi"><span>胃</span></div>
+            <div class="ceshi"><span>昴</span></div>
+            <div class="ceshi"><span>毕</span></div>
+            <div class="ceshi"><span>觜</span></div>
+            <div class="ceshi"><span>参</span></div>
+            <div class="ceshi"><span>井</span></div>
+            <div class="ceshi"><span>鬼</span></div>
+            <div class="ceshi"><span>柳</span></div>
+            <div class="ceshi"><span>星</span></div>
+            <div class="ceshi"><span>张</span></div>
+            <div class="ceshi"><span>翼</span></div>
+            <div class="ceshi"><span>轸</span></div>
+            <div class="ceshi"><span>角</span></div>
+            <div class="ceshi"><span>亢</span></div>
+            <div class="ceshi"><span>氐</span></div>
+            <div class="ceshi"><span>房</span></div>
+            <div class="ceshi"><span>心</span></div>
+            <div class="ceshi"><span>尾</span></div>
+            <div class="ceshi"><span>箕</span></div>
+            <div class="eightGua_border"></div>
+        </div>
+        <div class="ring style_add_liusigua" style="width: 400px;height: 400px;">
+            <!-- 周易六十四卦·上经 -->
+            <div class="ceshi"><span class="iconfont icon-qianweitian"></span></div>
+            <div class="ceshi"><span class="iconfont icon-shuidibi"></span></div>
+            <div class="ceshi"><span class="iconfont icon-kunweidi"></span></div>
+            <div class="ceshi"><span class="iconfont icon-fengtianxiaoxu"></span></div>
+            <div class="ceshi"><span class="iconfont icon-shuileitun"></span></div>
+            <div class="ceshi"><span class="iconfont icon-shanshuimeng"></span></div>
+            <div class="ceshi"><span class="iconfont icon-dishuishi"></span></div>
+            <div class="ceshi"><span class="iconfont icon-shuitianxu"></span></div>
+            <div class="ceshi"><span class="iconfont icon-shanfenggu"></span></div>
+            <div class="ceshi"><span class="iconfont icon-tianzelv"></span></div>
+            <div class="ceshi"><span class="iconfont icon-ditiantai"></span></div>
+            <div class="ceshi"><span class="iconfont icon-tiandifou"></span></div>
+            <div class="ceshi"><span class="iconfont icon-tianhuotongren"></span></div>
+            <div class="ceshi"><span class="iconfont icon-huotiandayou"></span></div>
+            <div class="ceshi"><span class="iconfont icon-dishanqian"></span></div>
+            <div class="ceshi"><span class="iconfont icon-zeleisui"></span></div>
+            <div class="ceshi"><span class="iconfont icon-shanfenggu"></span></div>
+            <div class="ceshi"><span class="iconfont icon-leidiyu"></span></div>
+            <div class="ceshi"><span class="iconfont icon-fengdiguan"></span></div>
+            <div class="ceshi"><span class="iconfont icon-dizelin"></span></div>
+            <div class="ceshi"><span class="iconfont icon-shanhuobi"></span></div>
+            <div class="ceshi"><span class="iconfont icon-huoleishike"></span></div>
+            <div class="ceshi"><span class="iconfont icon-dileifu"></span></div>
+            <div class="ceshi"><span class="iconfont icon-tianleiwuwang"></span></div>
+            <div class="ceshi"><span class="iconfont icon-shantiandaxu"></span></div>
+            <div class="ceshi"><span class="iconfont icon-zefengdaguo"></span></div>
+            <div class="ceshi"><span class="iconfont icon-shandibao"></span></div>
+            <div class="ceshi"><span class="iconfont icon-kanweishui"></span></div>
+            <div class="ceshi"><span class="iconfont icon-liweihuo"></span></div>
+            <div class="ceshi"><span class="iconfont icon-shanleiyi"></span></div>
+            <div class="ceshi"><span class="iconfont icon-leifengheng"></span></div>
+            <div class="ceshi"><span class="iconfont icon-tianshandun"></span></div>
+            <!-- 周易六十四卦·下经 -->
+            <div class="ceshi"><span class="iconfont icon-leitiandazhuang"></span></div>
+            <div class="ceshi"><span class="iconfont icon-huodijin"></span></div>
+            <div class="ceshi"><span class="iconfont icon-zeshanxian"></span></div>
+            <div class="ceshi"><span class="iconfont icon-fenghuojiaren"></span></div>
+            <div class="ceshi"><span class="iconfont icon-dihuomingyi"></span></div>
+            <div class="ceshi"><span class="iconfont icon-huozekui"></span></div>
+            <div class="ceshi"><span class="iconfont icon-shuishanjian"></span></div>
+            <div class="ceshi"><span class="iconfont icon-leishuijie"></span></div>
+            <div class="ceshi"><span class="iconfont icon-shanzesun"></span></div>
+            <div class="ceshi"><span class="iconfont icon-fengleiyi"></span></div>
+            <div class="ceshi"><span class="iconfont icon-tianfenggou"></span></div>
+            <div class="ceshi"><span class="iconfont icon-zetianguai"></span></div>
+            <div class="ceshi"><span class="iconfont icon-zedicui"></span></div>
+            <div class="ceshi"><span class="iconfont icon-difengsheng"></span></div>
+            <div class="ceshi"><span class="iconfont icon-zeshuikun"></span></div>
+            <div class="ceshi"><span class="iconfont icon-huofengding"></span></div>
+            <div class="ceshi"><span class="iconfont icon-shuifengjing"></span></div>
+            <div class="ceshi"><span class="iconfont icon-zhenweilei"></span></div>
+            <div class="ceshi"><span class="iconfont icon-zehuoge"></span></div>
+            <div class="ceshi"><span class="iconfont icon-fengshanjian"></span></div>
+            <div class="ceshi"><span class="iconfont icon-leizeguimei"></span></div>
+            <div class="ceshi"><span class="iconfont icon-genweishan"></span></div>
+            <div class="ceshi"><span class="iconfont icon-leihuofeng"></span></div>
+            <div class="ceshi"><span class="iconfont icon-huoshanlv"></span></div>
+            <div class="ceshi"><span class="iconfont icon-xunweifeng"></span></div>
+            <div class="ceshi"><span class="iconfont icon-duiweize"></span></div>
+            <div class="ceshi"><span class="iconfont icon-fengshuihuan"></span></div>
+            <div class="ceshi"><span class="iconfont icon-shuizejie"></span></div>
+            <div class="ceshi"><span class="iconfont icon-fengzezhongfu"></span></div>
+            <div class="ceshi"><span class="iconfont icon-leishanxiaoguo"></span></div>
+            <div class="ceshi"><span class="iconfont icon-shuihuojiji"></span></div>
+            <div class="ceshi"><span class="iconfont icon-huoshuiweiji"></span></div>
+            <!-- <div class="eightGua_border"></div> -->
+        </div>
+        <div class="ring wreath" style="width: 380px;height: 380px;">
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="ceshi"><span></span></div>
+            <div class="eightGua_border eightGua_border_wreath"></div>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+    <script>
+        window.addEventListener("load",()=>{
+            const canvas = document.getElementById("myCanvas");
+            const ctx = canvas.getContext('2d');
+            let w,h;
+            let rainArr = [];
+            let canvasSize = function(){
+                w = window.innerWidth;
+                h = window.innerHeight;
+                canvas.width = w;
+                canvas.height = h;
+            }
+            // 获取随机值
+            const tools = {
+                random(mim,max){
+                    // [0 - 1]
+                    return Math.random() * (max - mim) + mim
+                }
+            }
+            class Rain {
+                constructor(){
+                }
+                init(){
+                    this.x = tools.random(0 , w);
+                    this.y = 0;
+                    this.w = tools.random(3 , 5);
+                    this.h = tools.random(15 , 25);
+                    this.color = "#13E4CC";
+                    // 速度
+                    this.vy = tools.random(1,2)
+                    // 下落加速度
+                    this.g = 0.1
+                    // 水花大小
+                    this.r = 0;
+                    this.max = tools.random(10,50);
+                    // 水花位置
+                    this.floor = tools.random(25,100);
+                    this.drawRai();
+                }
+                drawRai(){
+                    ctx.beginPath();
+                    ctx.rect(this.x ,this.y ,this.w,this.h);
+                    ctx.fillStyle = this.color;
+                    ctx.fill();
+                }
+                drawFlower(){
+                    ctx.beginPath();
+                    // ctx.arc(this.x + this.w ,this.y + this.w ,this.r,0,Math.PI*2);
+                    ctx.ellipse(
+                        this.x + this.w / 2,
+                        this.y + this.h ,
+                        this.r,
+                        this.r / 2.5,
+                        0,
+                        0,
+                        Math.PI*2
+                        );
+                        // ctx.ellipse(400,400,300,200,0,0,Math.PI*2);
+                    ctx.strokeStyle = this.color;
+                    ctx.stroke();
+                }
+                rainDown(){
+                    this.vy += this.g;
+                    this.y += this.vy;
+                    // this.drawRai();
+                    if(this.y >= (h - this.floor)){
+                        this.y  = h - this.floor;
+                        this.r++
+                        this.drawFlower()
+                        if(this.r >=this.max){
+                            this.init()
+                        }
+                    }else{
+                        this.drawRai()
+                    }
+                }
+            }
+            // 多个雨滴的创建
+            function raining (num) {
+            	for(let i = 0; i < num ; i++){
+            		// 雨滴间隔
+            		setTimeout(()=>{
+
+            			let rain = new Rain();
+                        rain.init()
+            			rain.drawRai();
+            			// 雨滴数据收集
+            			rainArr.push(rain)
+            		},100*i)
+            	}
+                setInterval(()=>{
+                    for(let item of rainArr){
+                        item.rainDown()
+                    }
+                    // 添加雨滴逐渐透明蒙版
+                    ctx.beginPath();
+                    ctx.rect(0,0,w,h)
+                    ctx.fillStyle = 'rgba(0,26,41,0.1)'
+                    ctx.fill()
+                },1000 / 60)
+            }
+            raining(50)
+            canvasSize()
+            window.addEventListener('resize',canvasSize)
+        })
+    </script>
+</body>
+
+</html>
